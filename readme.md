@@ -7,13 +7,14 @@
     Este ejercicio recibe 2 números y cambia el valor entre ellos.
 ### matematicas.php
     Este ejercicio tiene varias funciones.
-#### La primera:   
+- La primera:   
     Devuelve la cantidad de dígitos de un número.
-#### La segunda:   
-    Devuelve el dígito que ocupa, empezando por la izquierda, la posición $pos.
-#### La tercera:   
+- La segunda:   
+    Devuelve el dígito que ocupa, empezando por la
+    izquierda, la posición $pos.
+- La tercera:   
     Le quita por detrás (derecha) $cant dígitos.
-#### La cuarta:   
+- La cuarta:   
     Le quita por delante (izquierda) $cant dígitos..  
 ### parametrosVariables.php
     Este ejercicio ordena un array para sacar el número más grande en este.
