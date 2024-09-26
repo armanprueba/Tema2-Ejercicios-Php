@@ -14,8 +14,14 @@ while (!feof($fp)){
     $claves = array_keys($lista_jugadores);
 
     function ordenarAtleti($jug_atleti){
-        return $jug_atleti=='Atlético de Madrid';
+        return $jug_atleti["Equipo"] === 'Atlético de Madrid';
     }
+
+    function ordenDorsalAtleti($a, $b){   /* usa el operador nave espacial para ordenar el array de menor a mayor 
+                                            según el número de dorsal*/
+        return $a['Dorsal'] <=> $b['Dorsal'];
+    }
+
 
 fclose($fp); ///Cerramos el fichero
 include("plantillas.view.php");
