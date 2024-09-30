@@ -9,6 +9,8 @@
 <body> 
     <?php  
         cadenaAnalizadora("Un tigre bengali"); 
+    
+        
     ?> 
 </body> 
 </html> 
