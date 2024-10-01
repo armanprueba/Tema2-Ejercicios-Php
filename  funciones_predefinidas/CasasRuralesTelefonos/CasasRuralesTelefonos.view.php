@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CasasRuralesTelefonos.view</title>
 </head>
 <body>
 <?php
@@ -36,7 +36,7 @@
 
                 echo "<br><br>";
 
-                echo "El número de casas sin teléfono es: $casa_sin_telefono";
+                echo "El número de casas descartadas por no tener teléfono son: $casa_sin_telefono";
 
             ?>
 </body>

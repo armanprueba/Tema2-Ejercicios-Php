@@ -8,11 +8,11 @@
         foreach($palabra_separada as $palabra){  //Hago un foreach ya que es un array asociativo y no puedo recorrerlo por los indices
                 $tamaño_palabra = strlen($palabra);
                 $letras_total .= $palabra;
-                echo "Palabra: $palabra.  Tamaño de palabra: $tamaño_palabra.<br>"; 
+                echo "Palabra: $palabra.  Tamaño de palabra: $tamaño_palabra.<br>"; //Juntamos todas las letras de la cadena sin espacios
             }      
         $letras = strlen($letras_total);
         echo "<br><br>";
-        echo "El total de letras que había en esa palabra era: $letras<br> y la de palabras era: $cantidad_palabras"; 
+        echo "El total de letras que había en esa palabra era: $letras<br> y la de palabras era: $cantidad_palabras"; //Contamos con strln el número de letras sin los espacios
     }  
     include("analizadorWC.view.php"); 
 ?> 
