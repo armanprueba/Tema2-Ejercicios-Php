@@ -15,4 +15,5 @@
         .strlen($letras_total)  ."). <br>El total de palabras que habían en esa palabra era: $cantidad_palabras<br>"; 
     }  
     include("analizador.view.php");
+
 ?> 
