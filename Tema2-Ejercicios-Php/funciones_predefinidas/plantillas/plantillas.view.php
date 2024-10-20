@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 10px;
+        }
+        table{
+            margin: 20px;
+        }
+    </style>
 </head>
     <body>
         <h1>Plantilla</h1>
             <?php
-                $concat = '<table border=1>';
+            // Iniciamos la tabla
                 $concat_tabla = '<table border=1>';
                 $concat_tabla .= '<tr>';
                 $concat_tabla .= '<th> Dorsal</th>';
@@ -17,25 +25,32 @@
                 $concat_tabla .= '<th> Posicion </th>';
                 $concat_tabla .= '<th> Equipo </th>';
                 $concat_tabla .= '</tr>';
-                $concat_tabla .= '</table>';
-                echo $concat_tabla;
+                
                 
                 $lista_atleti = array_filter($lista_jugadores, "ordenarAtleti");
+                // Creamos la fila de encabezados
                 foreach ($lista_jugadores as $jugador) {
 
                     //Concatenamos las tablas en una variable, también podriamos hacer el "echo" directamente
-                    $concat .= '<tr>';
-                    $concat .= '<td>' . $jugador['Dorsal'] .'</td>';
-                    $concat .= '<td>' . $jugador['Nombre'] .'</td>';
-                    $concat .= '<td>' . $jugador['Apellidos'] .'</td>';
-                    $concat .= '<td>' . $jugador['Posicion'] .'</td>';
-                    $concat .= '<td>' . $jugador['Equipo'].'</td>';
-                    $concat .= '</tr>';
+                    $concat_tabla .= '<tr>';
+                    $concat_tabla .= '<td>' . $jugador['Dorsal'] .'</td>';
+                    $concat_tabla .= '<td>' . $jugador['Nombre'] .'</td>';
+                    $concat_tabla .= '<td>' . $jugador['Apellidos'] .'</td>';
+                    $concat_tabla .= '<td>' . $jugador['Posicion'] .'</td>';
+                    $concat_tabla .= '<td>' . $jugador['Equipo'].'</td>';
+                    $concat_tabla .= '</tr>';
                 }
-               
-                echo $concat;
-                
-                echo $concat_atleti= '<table border=1>';
+                echo $concat_tabla;
+        
+                //Hacemos lo mismo con el atleti
+                $concat_atleti = '<table border=1>';
+                $concat_atleti .= '<tr>';
+                $concat_atleti .= '<th> Dorsal</th>';
+                $concat_atleti .= '<th> Nombre </th>';
+                $concat_atleti .= '<th> Apellidos </th>';
+                $concat_atleti .= '<th> Posicion </th>';
+                $concat_atleti .= '<th> Equipo </th>';
+                $concat_atleti .= '</tr>';
                 usort($lista_atleti, "ordenDorsalAtleti");  /* 
                                                         $atleticOrden = usort($lista_atleti, function($a, $b) 
                                                         {return $a['Dorsal'] <=> $b['Dorsal']; } 
@@ -52,7 +67,6 @@
                     $concat_atleti .= '</tr>';
                 }
                 $concat_atleti .= '</table>';
-                echo "<br><br>";
                 echo $concat_atleti;
             ?>
         </table>
